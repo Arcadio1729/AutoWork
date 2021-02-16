@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="InvestDB2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Amortization">
+          <Key>
+            <PropertyRef Name="Name_ID" />
+          </Key>
+          <Property Name="Name_ID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Ticker" Type="nvarchar(max)" />
+          <Property Name="Period" Type="nvarchar(max)" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="BalanceCapital">
+          <Key>
+            <PropertyRef Name="Name_ID" />
+          </Key>
+          <Property Name="Name_ID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Ticker" Type="nvarchar(max)" />
+          <Property Name="Period" Type="nvarchar(max)" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="CurrentAssets">
+          <Key>
+            <PropertyRef Name="Name_ID" />
+          </Key>
+          <Property Name="Name_ID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Ticker" Type="nvarchar(max)" />
+          <Property Name="Period" Type="nvarchar(max)" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="CurrentLiabilities">
+          <Key>
+            <PropertyRef Name="Name_ID" />
+          </Key>
+          <Property Name="Name_ID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Ticker" Type="nvarchar(max)" />
+          <Property Name="Period" Type="nvarchar(max)" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="Ebit">
+          <Key>
+            <PropertyRef Name="Name_ID" />
+          </Key>
+          <Property Name="Name_ID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Ticker" Type="nvarchar(max)" />
+          <Property Name="Period" Type="nvarchar(max)" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="StocksDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ticker" Type="varchar" MaxLength="3" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="StocksAmount" Type="int" />
+        </EntityType>
+        <EntityType Name="StocksQuotes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="varchar" MaxLength="50" />
+          <Property Name="Ticker" Type="varchar" MaxLength="3" />
+          <Property Name="Name_ID" Type="varchar" MaxLength="50" />
+          <Property Name="QuoteDate" Type="date" />
+          <Property Name="QuoteValue" Type="money" />
+        </EntityType>
+        <EntityType Name="TotalAssets">
+          <Key>
+            <PropertyRef Name="Name_ID" />
+          </Key>
+          <Property Name="Name_ID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Ticker" Type="nvarchar(max)" />
+          <Property Name="Period" Type="nvarchar(max)" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityContainer Name="InvestDB2ModelStoreContainer">
+          <EntitySet Name="Amortization" EntityType="Self.Amortization" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BalanceCapital" EntityType="Self.BalanceCapital" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CurrentAssets" EntityType="Self.CurrentAssets" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CurrentLiabilities" EntityType="Self.CurrentLiabilities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ebit" EntityType="Self.Ebit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StocksDetails" EntityType="Self.StocksDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StocksQuotes" EntityType="Self.StocksQuotes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TotalAssets" EntityType="Self.TotalAssets" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InvestDB2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Amortization">
+          <Key>
+            <PropertyRef Name="Name_ID" />
+          </Key>
+          <Property Name="Name_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Period" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="BalanceCapital">
+          <Key>
+            <PropertyRef Name="Name_ID" />
+          </Key>
+          <Property Name="Name_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Period" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="CurrentAsset">
+          <Key>
+            <PropertyRef Name="Name_ID" />
+          </Key>
+          <Property Name="Name_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Period" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="CurrentLiability">
+          <Key>
+            <PropertyRef Name="Name_ID" />
+          </Key>
+          <Property Name="Name_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Period" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="Ebit">
+          <Key>
+            <PropertyRef Name="Name_ID" />
+          </Key>
+          <Property Name="Name_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Period" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="TotalAsset">
+          <Key>
+            <PropertyRef Name="Name_ID" />
+          </Key>
+          <Property Name="Name_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Period" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityContainer Name="InvestDB2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Amortizations" EntityType="Self.Amortization" />
+          <EntitySet Name="BalanceCapitals" EntityType="Self.BalanceCapital" />
+          <EntitySet Name="CurrentAssets" EntityType="Self.CurrentAsset" />
+          <EntitySet Name="CurrentLiabilities" EntityType="Self.CurrentLiability" />
+          <EntitySet Name="Ebits" EntityType="Self.Ebit" />
+          <EntitySet Name="TotalAssets" EntityType="Self.TotalAsset" />
+          <EntitySet Name="StocksDetails" EntityType="InvestDB2Model.StocksDetail" />
+          <EntitySet Name="StocksQuotes" EntityType="InvestDB2Model.StocksQuote" />
+        </EntityContainer>
+        <EntityType Name="StocksDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ticker" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StocksAmount" Type="Int32" />
+        </EntityType>
+        <EntityType Name="StocksQuote">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ticker" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Name_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="QuoteDate" Type="DateTime" Precision="0" />
+          <Property Name="QuoteValue" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InvestDB2ModelStoreContainer" CdmEntityContainer="InvestDB2Entities">
+          <EntitySetMapping Name="Amortizations">
+            <EntityTypeMapping TypeName="InvestDB2Model.Amortization">
+              <MappingFragment StoreEntitySet="Amortization">
+                <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BalanceCapitals">
+            <EntityTypeMapping TypeName="InvestDB2Model.BalanceCapital">
+              <MappingFragment StoreEntitySet="BalanceCapital">
+                <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CurrentAssets">
+            <EntityTypeMapping TypeName="InvestDB2Model.CurrentAsset">
+              <MappingFragment StoreEntitySet="CurrentAssets">
+                <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CurrentLiabilities">
+            <EntityTypeMapping TypeName="InvestDB2Model.CurrentLiability">
+              <MappingFragment StoreEntitySet="CurrentLiabilities">
+                <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ebits">
+            <EntityTypeMapping TypeName="InvestDB2Model.Ebit">
+              <MappingFragment StoreEntitySet="Ebit">
+                <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TotalAssets">
+            <EntityTypeMapping TypeName="InvestDB2Model.TotalAsset">
+              <MappingFragment StoreEntitySet="TotalAssets">
+                <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StocksDetails">
+            <EntityTypeMapping TypeName="InvestDB2Model.StocksDetail">
+              <MappingFragment StoreEntitySet="StocksDetails">
+                <ScalarProperty Name="StocksAmount" ColumnName="StocksAmount" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StocksQuotes">
+            <EntityTypeMapping TypeName="InvestDB2Model.StocksQuote">
+              <MappingFragment StoreEntitySet="StocksQuotes">
+                <ScalarProperty Name="QuoteValue" ColumnName="QuoteValue" />
+                <ScalarProperty Name="QuoteDate" ColumnName="QuoteDate" />
+                <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

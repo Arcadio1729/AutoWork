@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InvestDB2ModelStoreContainer" CdmEntityContainer="InvestDB2Entities">
+    <EntitySetMapping Name="Amortizations">
+      <EntityTypeMapping TypeName="InvestDB2Model.Amortization">
+        <MappingFragment StoreEntitySet="Amortization">
+          <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+          <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BalanceCapitals">
+      <EntityTypeMapping TypeName="InvestDB2Model.BalanceCapital">
+        <MappingFragment StoreEntitySet="BalanceCapital">
+          <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+          <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrentAssets">
+      <EntityTypeMapping TypeName="InvestDB2Model.CurrentAsset">
+        <MappingFragment StoreEntitySet="CurrentAssets">
+          <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+          <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrentLiabilities">
+      <EntityTypeMapping TypeName="InvestDB2Model.CurrentLiability">
+        <MappingFragment StoreEntitySet="CurrentLiabilities">
+          <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+          <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ebits">
+      <EntityTypeMapping TypeName="InvestDB2Model.Ebit">
+        <MappingFragment StoreEntitySet="Ebit">
+          <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+          <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TotalAssets">
+      <EntityTypeMapping TypeName="InvestDB2Model.TotalAsset">
+        <MappingFragment StoreEntitySet="TotalAssets">
+          <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+          <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StocksDetails">
+      <EntityTypeMapping TypeName="InvestDB2Model.StocksDetail">
+        <MappingFragment StoreEntitySet="StocksDetails">
+          <ScalarProperty Name="StocksAmount" ColumnName="StocksAmount" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StocksQuotes">
+      <EntityTypeMapping TypeName="InvestDB2Model.StocksQuote">
+        <MappingFragment StoreEntitySet="StocksQuotes">
+          <ScalarProperty Name="QuoteValue" ColumnName="QuoteValue" />
+          <ScalarProperty Name="QuoteDate" ColumnName="QuoteDate" />
+          <ScalarProperty Name="Name_ID" ColumnName="Name_ID" />
+          <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

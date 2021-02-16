@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InvestDB2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Amortization">
+    <Key>
+      <PropertyRef Name="Name_ID" />
+    </Key>
+    <Property Name="Name_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Period" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="BalanceCapital">
+    <Key>
+      <PropertyRef Name="Name_ID" />
+    </Key>
+    <Property Name="Name_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Period" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="CurrentAsset">
+    <Key>
+      <PropertyRef Name="Name_ID" />
+    </Key>
+    <Property Name="Name_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Period" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="CurrentLiability">
+    <Key>
+      <PropertyRef Name="Name_ID" />
+    </Key>
+    <Property Name="Name_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Period" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Ebit">
+    <Key>
+      <PropertyRef Name="Name_ID" />
+    </Key>
+    <Property Name="Name_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Period" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TotalAsset">
+    <Key>
+      <PropertyRef Name="Name_ID" />
+    </Key>
+    <Property Name="Name_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Period" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityContainer Name="InvestDB2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Amortizations" EntityType="Self.Amortization" />
+    <EntitySet Name="BalanceCapitals" EntityType="Self.BalanceCapital" />
+    <EntitySet Name="CurrentAssets" EntityType="Self.CurrentAsset" />
+    <EntitySet Name="CurrentLiabilities" EntityType="Self.CurrentLiability" />
+    <EntitySet Name="Ebits" EntityType="Self.Ebit" />
+    <EntitySet Name="TotalAssets" EntityType="Self.TotalAsset" />
+    <EntitySet Name="StocksDetails" EntityType="InvestDB2Model.StocksDetail" />
+    <EntitySet Name="StocksQuotes" EntityType="InvestDB2Model.StocksQuote" />
+  </EntityContainer>
+  <EntityType Name="StocksDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ticker" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StocksAmount" Type="Int32" />
+  </EntityType>
+  <EntityType Name="StocksQuote">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ticker" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Name_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="QuoteDate" Type="DateTime" Precision="0" />
+    <Property Name="QuoteValue" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+</Schema>
